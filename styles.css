@@ -1,18 +1,234 @@
+/* Global Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-}
-
-h1 {
+    background-color: #f8f9fa;
     color: #333;
+    padding-top: 80px; /* padding between nav bar and page */
+}
+
+/* 🔹 Fixed Minimalist Navbar */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #121212; /* Solid dark background */
+    padding: 30px; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    transition: background 0.3s ease-in-out;
+}
+
+/* 🔹 Navigation Links */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin-right: 30px;
+}
+
+nav ul li {
+    margin: 0 15px; /* Already included inside nav ul */
+}
+
+/* 🔹 Nav Links - Default Style */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    
+    transition: color 0.3s ease-in-out;
+}
+
+/* 🔹 Nav Links - Hover Effect */
+nav ul li a:hover {
+    color: #f39c12; /* Highlight color */
+}
+
+/* 🔹 Section Styling */
+section {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 25px;
+    background: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+/* 🔹 Section Titles (About, Projects, Resume, Contact) */
+h2 {
+    color: #f39c12;
+}
+
+/* 🔹 Project Links - Default Style */
+.project a {
+    color: #007bff;
+    text-decoration: underline;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+/* 🔹 Project Links - Hover Effect */
+.project a:hover {
+    color: #0056b3;
+}
+
+/* 🔹 Resume Section (Skills List) */
+.resume-content ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+/* 🔹 Footer Styling */
+footer {
     text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+
+.signature-logo {
+    height: 110px;  /* Change this value to make it bigger or smaller */
+    width: auto;   /* Keeps aspect ratio */
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* 🔹 Hover Effect - Slight Zoom */
+.signature-logo:hover {
+    transform: scale(1.1) translateY(-50%);
+}
+
+/* 🔹 Full-Screen Hero Section */
+.hero {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #121212; /* Dark background */
+    color: white;
+    padding: 20px;
+}
+
+/* 🔹 Typography */
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.hero .highlight {
+    color: #f39c12; /* Highlight color (orange/yellow) */
+}
+
+.hero p {
+    font-size: 22px;
+    opacity: 0.8;
+}
+
+/* 🔹 Call to Action Button */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    background: #f39c12;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: #e67e22;
+}
+
+
+/* 🔹 Projects Section */
+.projects {
+    padding: 100px 10%;
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+}
+
+/* 🔹 Grid Layout for Projects */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
     margin-top: 50px;
 }
 
-h2 {
-    color: #000000;
-    text-align: center;
-    margin-top: 50px;
+/* 🔹 Project Cards */
+.project {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.project h3 {
+    margin-top: 15px;
+    font-size: 22px;
+}
+
+.project p {
+    opacity: 0.7;
+}
+
+/* 🔹 Hover Effect */
+.project:hover {
+    transform: scale(1.05);
+}
+
+
+/* 🔹 General Contact Button Styling */
+.contact-button {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 12px 20px;
+    margin: 10px;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* 🔹 Email Button */
+.email-button {
+    background: #f39c12; /* Orange color */
+    color: white;
+}
+
+.email-button:hover {
+    background: #e67e22; /* Darker orange */
+    transform: scale(1.1);
+}
+
+/* 🔹 LinkedIn Button */
+.linkedin-button {
+    background: #0077b5; /* LinkedIn blue */
+    color: white;
+}
+
+.linkedin-button:hover {
+    background: #005582; /* Darker LinkedIn blue */
+    transform: scale(1.1);
 }
